@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { DialogModule } from 'primeng/dialog';
 import { ComoApoyarComponent } from './como-apoyar.component';
 
 describe('ComoApoyarComponent', () => {

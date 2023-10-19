@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './como-apoyar.component.html',
   styleUrls: ['./como-apoyar.component.css']
 })
-export class ComoApoyarComponent {
+export class ComoApoyarComponent 
+{
+  visible: boolean = false;
 
+    showDialog() {
+        this.visible = true;
+    }
+    
+    sidebarVisible: boolean = false;
 }
