@@ -7,11 +7,22 @@ import { Component } from '@angular/core';
 })
 export class ComoApoyarComponent 
 {
-  visible: boolean = false;
+  ingredient!: string;
 
-    showDialog() {
+  visible: boolean = false;
+  visibledos: boolean = false;
+  visibletres: boolean = false;
+
+    showDialog() 
+    {
         this.visible = true;
     }
-    
-    sidebarVisible: boolean = false;
+    showDialogDos() 
+    {
+      this.visibledos = true;
+    }
+    showDialogTres() 
+    {
+      this.visibletres = true;
+    }
 }

@@ -76,22 +76,22 @@
 
 <br>
 <div class="" style="background-color: #2596be;">
+  <br>
   <div class="container">
     <div class="row">
       <div class="col-6 text-center">
-        <p style="color: white; font-size: 30px;"><strong>Mision</strong></p>
-        <p style="font-size: medium; color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero
-          asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+        <p style="color: white; font-size: 40px;"><strong>Mision</strong></p>
+        <p style="font-size: medium; color: white;">Proveer comida nutritiva para niños de escasos 
+          recursos mediante el apoyo a comedores públicos, con el fin de crear un mejor futuro para los niños.</p>
       </div>
       <div class="col-6 text-center">
-        <p style="color:  white; font-size: 30px;"><strong>Vision</strong></p>
-        <p style="color:  white; font-size: medium;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero
-          asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+        <p style="color:  white; font-size: 40px;"><strong>Vision</strong></p>
+        <p style="color:  white; font-size: medium;">Por una sociedad más justa y equitativa, dónde los niños puedan 
+        obtener una alimentación de calidad por medio de Comedores públicos.</p>
       </div>
     </div>
   </div>
+  <br>
 </div>
 <br>
 
@@ -132,35 +132,153 @@
     </div>
   </button>
 </div>
-
 <hr>
 
-<p-dialog header="Header" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
-  [resizable]="false">
-  <p class="m-0">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+<p-dialog header="Método de Pago" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+  <div class="card flex flex-column md:flex-row gap-3">
+
+  <div class="botones">
+      <div class="flex align-items-center">
+          <p-radioButton name="paypal" value="paupal" [(ngModel)]="ingredient" inputId="ingredient1"></p-radioButton>
+          <label class="ml-2">PayPal</label>
+          <img class="paypalogo" src="../../assets/images/paypal.png">
+      </div>
+  </div>
+  <div class="botones">
+      <div class="flex align-items-center">
+          <p-radioButton name="debit" value="Debit" ></p-radioButton>
+          <label class="ml-2">Debito/Credito</label>
+          <img class="creditlogo" src="../../assets/images/creditcard.png">
+      </div>
+  </div>
+  <div class="onetwo">
+      <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">
+              <i class="pi pi-user"></i>
+          </span>
+          <input pInputText placeholder="Nombres" />
+      </div>
+
+      <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">
+              <i class="pi pi-user"></i>
+          </span>
+          <input type="text" pInputText placeholder="Apellido" />
+      </div>
+  </div>
+  <div class="threefour">
+      <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">
+              <i class="pi pi-credit-card"></i>
+          </span>
+          <input type="text" pInputText placeholder="Número de tarjeta" />
+      </div>
+      
+      <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">
+              <i class="pi pi-info-circle"></i>
+          </span>
+          <input type="text" pInputText placeholder="Fecha de expiación" />
+      </div>
+  </div>
+  <div class="five">
+      <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">
+              <i class="pi pi-info-circle"></i>
+          </span>
+          <input type="text" pInputText placeholder="Código de Seguridad" />
+      </div>
+      <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">
+              <i class="pi pi-money-bill"></i>
+          </span>
+          <input type="text" pInputText placeholder="Cantidad a donar" />
+      </div>
+  </div>
+
+  </div>
 </p-dialog>
 
-<p-dialog header="Header2" [(visible)]="visible2" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
-  [resizable]="false">
-  <p class="m-0">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+<p-dialog header="Disponibilidad de Talleres" [(visible)]="visible2" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+        <table class="table caption-top">
+            <thead>
+                <tr>
+                    <th scope="col">Actividades</th>
+                    <th scope="col">Horario</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Costo</th>
+                    <th scope="col">Imparte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Psicología</th>
+                    <td>2:00 PM - 3:00 PM</td>
+                    <td>23/10/2023</td>
+                    <td>$20 MXN</td>
+                    <td>Gilda Duarte</td>
+                </tr>
+                <tr>
+                    <th scope="row">Música</th>
+                    <td>12:00 PM - 1:00 PM</td>
+                    <td>12/11/2023</td>
+                    <td>$30 MXN</td>
+                    <td>Fernando Melendrez</td>
+                </tr>
+                <tr>
+                    <th scope="row">Arte Terapia</th>
+                    <td>10:00 AM - 11:00 AM</td>
+                    <td>05/12/2023</td>
+                    <td>$45 MXN</td>
+                    <td>Alillam Parra</td>
+                </tr>
+            </tbody>
+        </table>
 </p-dialog>
 
-<p-dialog header="Header3" [(visible)]="visible3" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
-  [resizable]="false">
-  <p class="m-0">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+<p-dialog header="Servicio de Comida" [(visible)]="visible3" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+        
+        <div class="card" style="width: 18rem;">
+            <img src="../../assets/images/tamales.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Tamales</h5>
+                <p class="card-text">Platillo delicioso con frijolitos y tres tamales.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Tamal de Carne</li>
+                <li class="list-group-item">Frijoles</li>
+                <li class="list-group-item">$50 MXN</li>
+            </ul>
+        </div>
+
+    <div class="comidados">
+        <div class="card" style="width: 18rem;">
+            <img src="../../assets/images/quesadillas.jpg" class="quekas" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Quesadillas</h5>
+                <p class="card-text">Quesadillas con frijoles y verdura.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Quesadillas</li>
+                <li class="list-group-item">Frijoles y verdura</li>
+                <li class="list-group-item">$40 MXN</li>
+            </ul>
+        </div>
+    </div> 
+
+    <div class="comidatres">
+        <div class="card" style="width: 18rem;">
+            <img src="../../assets/images/molletes.jpg" class="quekas" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Molletes</h5>
+                <p class="card-text">Dos deliciosos molletes con frijolitos</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Molletes</li>
+                <li class="list-group-item">Frijoles</li>
+                <li class="list-group-item">$45 MXN</li>
+            </ul>
+        </div>
+    </div>
+
 </p-dialog>
