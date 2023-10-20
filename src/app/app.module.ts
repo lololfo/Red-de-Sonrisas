@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavarComponent } from './navar/navar.component';
+
 //PRIME NG
 import { DialogModule } from 'primeng/dialog';
 import { CardModule } from 'primeng/card';
