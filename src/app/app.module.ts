@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComoApoyarComponent } from './como-apoyar/como-apoyar.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavarComponent } from './navar/navar.component';
@@ -27,7 +26,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    ComoApoyarComponent,
     QuienesSomosComponent,
     InicioComponent,
     NavarComponent
