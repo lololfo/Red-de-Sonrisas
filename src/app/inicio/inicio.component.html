@@ -15,8 +15,9 @@
     </div>
     <div class="container text-center"
       style="color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-      <h1>Tu texto estático</h1>
-      <p>Otra información estática</p>
+      <img src="../../assets/images/redazul.png" alt="" style="margin-top: 100px; max-width: 800px;">
+      <!-- <p style="font-family: cursive; font-size: 80px;">Red de sonrisas</p>
+      <p>Otra información estática</p> -->
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -95,43 +96,71 @@
 <br>
 
 <div class="d-flex justify-content-center">
-  <div class="flex justify-content-center m-3">
-    <p-card [style]="{ width: '355px', height: '260px', boxShadow: '0 0 20px 0 #3cc4f0'}">
-      <ng-template pTemplate="header">
-        <p class="text-center" style="font-size: 50px;"><strong>67</strong></p>
-        <img alt="Card" src="../../assets/images/barra-grafica.png" style="margin-left: 33%; width: 100px;" />
-        <p style="margin-left: 53px;"> <br>
-          Niños que apoyamos hoy en día
-        </p>
-      </ng-template>
-    </p-card>
-  </div>
+  <button (click)="showDialog3()" style="border: none; background-color: transparent;">
+    <div class="d-flex justify-content-center">
+      <div class="flex justify-content-center m-3">
+        <p-card [style]="{ width: '355px', height: '260px', boxShadow: '0 0 20px 0 orange'}">
+          <ng-template pTemplate="header">
+            <p class="text-center" style="font-size: 50px;"><strong>Menu del dia</strong></p>
+            <img alt="Card" src="../../assets/images/bandeja-de-comida.png" style=" width: 100px;" />
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </button>
 
-  <div class="flex justify-content-center m-3">
-    <p-card [style]="{ width: '370px', height: '270px', boxShadow: '0 0 20px 0 #1a23d7'}">
-      <ng-template pTemplate="header">
-        <p class="text-center" style="font-size: 50px;"><strong>$ 3,537 MXN</strong></p>
-        <img alt="Card" src="../../assets/images/grafico.png" style="margin-left: 33%; width: 100px;" />
-      </ng-template>
-      <p style="margin-left: 25px;">
-        En donativos actuales para la causa
-      </p>
-      <ng-template pTemplate="footer">
-      </ng-template>
-    </p-card>
-  </div>
+  <button (click)="showDialog()" style="border: none; background-color: transparent;">
+    <div class="flex justify-content-center m-3">
+      <p-card [style]="{ width: '370px', height: '260px', boxShadow: '0 0 25px 0 red'}">
+        <ng-template pTemplate="header">
+          <p class="text-center" style="font-size: 50px;"><strong>Donar ahora</strong></p>
+          <img alt="Card" src="../../assets/images/amor.png" style=" width: 100px;" />
+        </ng-template>
+      </p-card>
+    </div>
+  </button>
 
-  <div class="flex justify-content-center m-3">
-    <p-card [style]="{ width: '355x', height: '260px', boxShadow: '0 0 20px 0 #3cc4f0'}">
-      <ng-template pTemplate="header">
-        <p class="text-center" style="font-size: 50px;"><strong>120</strong></p>
-        <img alt="Card" src="../../assets/images/grafico-de-torta.png" style="margin-left: 33%; width: 100px;" />
-      </ng-template>
-      <p style="margin-top: -10px;">
-        Platos servidos a niños de bajos recursos
-      </p>
-      <ng-template pTemplate="footer">
-      </ng-template>
-    </p-card>
-  </div>
+  <button (click)="showDialog2()" style="border: none; background-color: transparent;">
+    <div class="flex justify-content-center m-3">
+      <p-card [style]="{ width: '355px', height: '260px', boxShadow: '0 0 20px 0 orange'}">
+        <ng-template pTemplate="header">
+          <p class="text-center" style="font-size: 50px;"><strong>Talleres </strong></p>
+          <p class="text-center" style="margin-top: -50px; font-size: 50px;"><strong>Disponibles</strong></p>
+          <img alt="Card" src="../../assets/images/taller.png" style="width: 100px;" />
+        </ng-template>
+      </p-card>
+    </div>
+  </button>
 </div>
+
+<hr>
+
+<p-dialog header="Header" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+  [resizable]="false">
+  <p class="m-0">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</p-dialog>
+
+<p-dialog header="Header2" [(visible)]="visible2" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+  [resizable]="false">
+  <p class="m-0">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</p-dialog>
+
+<p-dialog header="Header3" [(visible)]="visible3" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+  [resizable]="false">
+  <p class="m-0">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</p-dialog>

@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
+  visible: boolean = false;
 
+    showDialog() {
+        this.visible = true;
+    }
+
+    visible2: boolean = false;
+
+    showDialog2() {
+        this.visible2 = true;
+    }
+
+    visible3: boolean = false;
+
+    showDialog3() {
+        this.visible3 = true;
+    }
 }
