@@ -21,6 +21,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PatrocinadoresComponent } from './patrocinadores/patrocinadores.component';
 //PRIME NG
 
 
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     QuienesSomosComponent,
     InicioComponent,
-    NavarComponent
+    NavarComponent,
+    PatrocinadoresComponent
   ],
   imports: [
     BrowserAnimationsModule,
